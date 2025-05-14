@@ -1,0 +1,21 @@
+def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
+        def encode(word):
+            d={}
+            l=[]
+            j=0
+            for i in word:
+                if i not in d:
+                    d[i]=j
+                    j+=1
+                l.append(d[i])
+            return l
+        patterncode=encode(pattern)
+        return[word for word in words if encode(word)==patterncode]
+Input: words = ["abc","deq","mee","aqq","dkd","ccc"], pattern = "abb"
+Output: ["mee","aqq"]
+Explanation: "mee" matches the pattern because there is a permutation {a -> m, b -> e, ...}. 
+"ccc" does not match the pattern because {a -> c, b -> c, ...} is not a permutation, since a and b map to the same letter.
+Example 2:
+
+Input: words = ["a","b","c"], pattern = "a"
+Output: ["a","b","c"]
