@@ -1,0 +1,19 @@
+def __init__(self):
+        self.queue=[]
+
+    def push(self, x: int) -> None:
+        queue.append(x)
+
+    def pop(self) -> int:
+        
+
+    def peek(self) -> int:
+        return queue[0]
+
+    def empty(self) -> bool:
+        return True if queue else False
+Input
+["MyQueue", "push", "push", "peek", "pop", "empty"]
+[[], [1], [2], [], [], []]
+Output
+[null, null, null, 1, 1, false]
