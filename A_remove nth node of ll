@@ -1,0 +1,22 @@
+def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        dum=ListNode(0)
+        dum.next=head
+        first=dum
+        second=dum
+        for i in range(n+1):
+            first=first.next
+        while first:
+            first=first.next
+            second=second.next
+        second.next=second.next.next
+        return dum.next
+Input: head = [1,2,3,4,5], n = 2
+Output: [1,2,3,5]
+Example 2:
+
+Input: head = [1], n = 1
+Output: []
+Example 3:
+
+Input: head = [1,2], n = 1
+Output: [1]
