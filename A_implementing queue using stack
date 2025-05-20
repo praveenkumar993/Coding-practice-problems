@@ -2,16 +2,17 @@ def __init__(self):
         self.queue=[]
 
     def push(self, x: int) -> None:
-        queue.append(x)
+        self.queue.append(x
 
     def pop(self) -> int:
+        self.queue.pop(0)
         
 
     def peek(self) -> int:
-        return queue[0]
+        return self.queue(0)
 
     def empty(self) -> bool:
-        return True if queue else False
+        return len(self.queue)==0
 Input
 ["MyQueue", "push", "push", "peek", "pop", "empty"]
 [[], [1], [2], [], [], []]
